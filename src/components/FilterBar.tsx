@@ -1,11 +1,14 @@
 function FilterBar() {
   return (
-    <div>
+    <section className="filter-bar">
       <h2>Filter</h2>
-      <button>All</button>
-      <button>Watched</button>
-      <button>Unwatched</button>
-    </div>
+
+      <div className="filter-buttons">
+        <button>All</button>
+        <button>Watched</button>
+        <button>Unwatched</button>
+      </div>
+    </section>
   );
 }
 

@@ -1,8 +1,8 @@
 function MovieList() {
   return (
-    <div>
+    <section className="movie-list">
       <h2>My Movies</h2>
-    </div>
+    </section>
   );
 }
 

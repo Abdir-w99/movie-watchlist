@@ -1,0 +1,105 @@
+.navbar {
+  background-color: #dc2626;
+  color: white;
+  padding: 18px 24px;
+}
+
+.navbar h2 {
+  font-size: 22px;
+}
+
+.home-link,
+.back-link {
+  display: block;
+  max-width: 850px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.movie-list h2 {
+  text-align: center;
+}
+
+main,
+.movie-form-section,
+.filter-bar,
+.movie-list,
+.movie-card,
+.movie-details {
+  max-width: 850px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+main {
+  margin-top: 30px;
+}
+
+main h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+main p {
+  color: #4b5563;
+  font-size: 17px;
+}
+
+.movie-form-section h2,
+.filter-bar h2,
+.movie-list h2 {
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+.movie-form {
+  display: flex;
+  gap: 10px;
+}
+
+.movie-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.movie-form input:focus {
+  border-color: #dc2626;
+}
+
+button {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #b91c1c;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.movie-card h3,
+.movie-details h3 {
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  margin-bottom: 8px;
+  color: #374151;
+}

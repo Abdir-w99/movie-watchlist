@@ -1,13 +1,13 @@
 function MovieForm() {
   return (
-    <div>
+    <section className="movie-form-section">
       <h2>Add Movie</h2>
 
-      <form>
+      <form className="movie-form">
         <input type="text" placeholder="Movie title" />
         <button type="submit">Add</button>
       </form>
-    </div>
+    </section>
   );
 }
 
