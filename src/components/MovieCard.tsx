@@ -2,7 +2,7 @@ function MovieCard() {
   return (
     <div>
       <h3>Interstellar</h3>
-      <button>Details</button>
+      <button>View Details</button>
     </div>
   );
 }

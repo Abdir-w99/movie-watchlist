@@ -4,6 +4,7 @@ import MovieForm from "../components/MovieForm";
 import FilterBar from "../components/FilterBar";
 import MovieList from "../components/MovieList";
 import MovieCard from "../components/MovieCard";
+import MovieDetails from "../components/MovieDetails";
 
 function MoviePage() {
   return (
@@ -13,6 +14,7 @@ function MoviePage() {
       <FilterBar />
       <MovieList />
       <MovieCard />
+      <MovieDetails />
     </div>
   );
 }
