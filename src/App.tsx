@@ -1,16 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MoviePage from "./pages/MoviePage";
+
 function App() {
   return (
-    <div>
-      <h1>Movie Watchlist</h1>
-      <form>
-        <input type="text" placeholder="Movie title" />
-        <button type="submit">Add movie</button>
-      </form>
-
-      <h2>My Movies</h2>
-
-      <p>Harry Potter</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movie/:id" element={<MoviePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
