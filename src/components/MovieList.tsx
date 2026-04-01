@@ -1,3 +1,4 @@
+import MovieCard from "./MovieCard";
 type Movie = {
   id: number;
   title: string;
@@ -12,9 +13,7 @@ function MovieList({ movies }: MovieListProps) {
   return (
     <div>
       {movies.map((movie) => (
-        <div key={movie.id}>
-          <h3>{movie.title}</h3>
-        </div>
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
   );
