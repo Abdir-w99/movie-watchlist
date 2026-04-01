@@ -60,7 +60,7 @@ function MoviePage() {
     <div>
       <Link to="/">Go to home</Link>
       <MovieForm addMovie={addMovie} />
-      <FilterBar filter={filter} setFilter={setFilter} />
+      <FilterBar setFilter={setFilter} />
       <MovieList movies={filteredMovies} />
     </div>
   );

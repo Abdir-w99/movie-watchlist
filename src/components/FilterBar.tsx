@@ -1,11 +1,10 @@
 type FilterType = "all" | "watched" | "unwatched";
 
 type FilterBarProps = {
-  filter: FilterType;
   setFilter: React.Dispatch<React.SetStateAction<FilterType>>;
 };
 
-function FilterBar({ filter, setFilter }: FilterBarProps) {
+function FilterBar({ setFilter }: FilterBarProps) {
   return (
     <section className="filter-bar">
       <h2>Filter</h2>
