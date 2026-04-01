@@ -1,9 +1,20 @@
-function MovieCard() {
+type Movie = {
+  id: number;
+  title: string;
+  watched: boolean;
+};
+
+type MovieCardProps = {
+  movie: Movie;
+};
+
+function MovieCard({ movie }: MovieCardProps) {
   return (
-    <div className="movie-card">
-      <h3>Interstellar</h3>
-      <button>View Details</button>
+    <div>
+      <h3>{movie.title}</h3>
+      <p>{movie.watched ? "Watched" : "Unwatched"}</p>
     </div>
   );
 }
+
 export default MovieCard;
