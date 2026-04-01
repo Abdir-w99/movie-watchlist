@@ -25,10 +25,22 @@ function MoviePage() {
       watched: true,
     },
   ]);
+
+  function addMovie(title: string) {
+    const newMovie: Movie = {
+      id: Date.now(),
+      title: title,
+      watched: false,
+    };
+
+    // update the movies state with the new movie
+    setMovies([...movies, newMovie]);
+  }
+
   return (
     <div>
       <Link to="/">Go to home</Link>
-      <MovieForm />
+      <MovieForm addMovie={addMovie} />
       <FilterBar />
       <MovieList movies={movies} />
     </div>

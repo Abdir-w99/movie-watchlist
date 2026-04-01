@@ -1,4 +1,5 @@
 import MovieCard from "./MovieCard";
+
 type Movie = {
   id: number;
   title: string;
