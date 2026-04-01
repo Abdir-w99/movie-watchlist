@@ -11,6 +11,8 @@ type Movie = {
   watched: boolean;
 };
 
+type FilterType = "all" | "watched" | "unwatched";
+
 function MoviePage() {
   // state for the movie list
   const [movies, setMovies] = useState<Movie[]>([
@@ -26,6 +28,9 @@ function MoviePage() {
     },
   ]);
 
+  // state for the current filter
+  const [filter, setFilter] = useState<FilterType>("all");
+
   function addMovie(title: string) {
     const newMovie: Movie = {
       id: Date.now(),
@@ -37,12 +42,26 @@ function MoviePage() {
     setMovies([...movies, newMovie]);
   }
 
+  // create a new list based on the selected filter
+  const filteredMovies = movies.filter((movie) => {
+    if (filter === "watched") {
+      return movie.watched === true;
+    }
+
+    if (filter === "unwatched") {
+      return movie.watched === false;
+    }
+
+    // show all movies
+    return true;
+  });
+
   return (
     <div>
       <Link to="/">Go to home</Link>
       <MovieForm addMovie={addMovie} />
-      <FilterBar />
-      <MovieList movies={movies} />
+      <FilterBar filter={filter} setFilter={setFilter} />
+      <MovieList movies={filteredMovies} />
     </div>
   );
 }
