@@ -1,8 +1,22 @@
-function MovieList() {
+type Movie = {
+  id: number;
+  title: string;
+  watched: boolean;
+};
+
+type MovieListProps = {
+  movies: Movie[];
+};
+
+function MovieList({ movies }: MovieListProps) {
   return (
-    <section className="movie-list">
-      <h2>My Movies</h2>
-    </section>
+    <div>
+      {movies.map((movie) => (
+        <div key={movie.id}>
+          <h3>{movie.title}</h3>
+        </div>
+      ))}
+    </div>
   );
 }
 
