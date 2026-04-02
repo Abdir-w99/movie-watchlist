@@ -4,7 +4,7 @@ A web application built with **React**, **TypeScript**, and **Vite** where users
 
 ## Project Description
 
-The purpose of this project is to create a movie watchlist application with a user interface inspired by IMDb. Users can add movies, mark them as watched or unwatched, filter the movie list, and view a details page for each movie.
+This is a school project created to practice building a web application with React, TypeScript, and Vite. The purpose of the project is to create a movie watchlist application with a user interface inspired by IMDb. Users can add movies, mark them as watched or unwatched, filter the movie list, and view a details page for each movie.
 
 ## Features
 
@@ -36,6 +36,11 @@ The project contains the following components and pages:
 - **MoviePage:** main page where users manage their movies
 - **MovieDetails:** shows details for a selected movie
 
+## Stateful Components
+
+- **MoviePage:** displays movies and handles filtering
+- **MovieForm:** allows the user to add a new movie to the list
+
 ## Technologies Used
 
 - **HTML/JSX**
@@ -63,4 +68,14 @@ npm run build
 
 ## Demo
 
-https://movie-watchlist-pied-mu.vercel.app/
+[Live demo](https://movie-watchlist-pied-mu.vercel.app/)
+
+## Requirements
+
+- [x] Project uses at least 6 components
+- [x] At least 2 components are stateful
+- [x] React Router is used to dynamically update the URL
+- [x] Git and GitHub have been used
+- [x] README file is included in the project
+- [x] Build and run instructions are included
+- [x] Demo link is included
