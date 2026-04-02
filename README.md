@@ -53,10 +53,13 @@ React Router is used to update the URL between pages.
 - `/movies` Movie list page
 - `/movie/:id` Movie details page
 
-## How to Build and Run the Project
+## How to Run the Project
 
 ```bash
 npm install
 npm run dev
-
 ```
+
+## Demo
+
+https://movie-watchlist-pied-mu.vercel.app/
