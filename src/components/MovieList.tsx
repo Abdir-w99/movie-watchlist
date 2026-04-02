@@ -12,8 +12,12 @@ type MovieListProps = {
 };
 
 function MovieList({ movies, toggleWatched }: MovieListProps) {
+  if (movies.length === 0) {
+    return <p className="empty-text">No movies found.</p>;
+  }
+
   return (
-    <div>
+    <div className="movie-list">
       {movies.map((movie) => (
         // send one movie and the toggle function to MovieCard
         <MovieCard key={movie.id} movie={movie} toggleWatched={toggleWatched} />

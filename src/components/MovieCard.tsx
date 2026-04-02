@@ -13,19 +13,40 @@ type MovieCardProps = {
 
 function MovieCard({ movie, toggleWatched }: MovieCardProps) {
   return (
-    <div>
+    <div className="movie-card">
       {/* go to the details page and send the movie data */}
-      <Link to={`/movie/${movie.id}`} state={{ movie: movie }}>
+      <Link
+        className="movie-title-link"
+        to={`/movie/${movie.id}`}
+        state={{ movie: movie }}
+      >
         <h3>{movie.title}</h3>
       </Link>
 
       {/* show if the movie is watched or not */}
-      <p>{movie.watched ? "Watched" : "Unwatched"}</p>
+      <p
+        className={`movie-status ${movie.watched ? "status-watched" : "status-unwatched"}`}
+      >
+        {movie.watched ? "Watched" : "Unwatched"}
+      </p>
 
-      {/* button to change watched status */}
-      <button onClick={() => toggleWatched(movie.id)}>
-        {movie.watched ? "Mark as unwatched" : "Mark as watched"}
-      </button>
+      <div className="movie-actions">
+        {/* button to change watched status */}
+        <button
+          className="primary-button"
+          onClick={() => toggleWatched(movie.id)}
+        >
+          {movie.watched ? "Mark as unwatched" : "Mark as watched"}
+        </button>
+
+        <Link
+          className="secondary-button"
+          to={`/movie/${movie.id}`}
+          state={{ movie: movie }}
+        >
+          View details
+        </Link>
+      </div>
     </div>
   );
 }

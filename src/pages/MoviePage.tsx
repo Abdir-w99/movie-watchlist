@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import Navbar from "../components/Navbar";
 import MovieForm from "../components/MovieForm";
 import FilterBar from "../components/FilterBar";
 import MovieList from "../components/MovieList";
@@ -23,7 +24,7 @@ function MoviePage() {
     },
     {
       id: 2,
-      title: "A dark knight",
+      title: "The Dark Knight",
       watched: true,
     },
   ]);
@@ -53,6 +54,7 @@ function MoviePage() {
       // keep other movies unchanged
       return movie;
     });
+
     // save the updated movie list
     setMovies(updatedMovies);
   }
@@ -72,11 +74,17 @@ function MoviePage() {
   });
 
   return (
-    <div>
-      <Link to="/">Go to home</Link>
-      <MovieForm addMovie={addMovie} />
-      <FilterBar setFilter={setFilter} />
-      <MovieList movies={filteredMovies} toggleWatched={toggleWatched} />
+    <div className="app-shell">
+      <Navbar />
+
+      <div className="page-container">
+        <Link to="/" className="browse-button">
+          Back to home page
+        </Link>
+        <MovieForm addMovie={addMovie} />
+        <FilterBar setFilter={setFilter} />
+        <MovieList movies={filteredMovies} toggleWatched={toggleWatched} />
+      </div>
     </div>
   );
 }

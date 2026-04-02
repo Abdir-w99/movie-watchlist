@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>Watchlist</h2>
+      <h2>Movie Watchlist</h2>
     </nav>
   );
 }
