@@ -8,9 +8,10 @@ type Movie = {
 
 type MovieCardProps = {
   movie: Movie;
+  toggleWatched: (id: number) => void;
 };
 
-function MovieCard({ movie }: MovieCardProps) {
+function MovieCard({ movie, toggleWatched }: MovieCardProps) {
   return (
     <div>
       {/* go to the details page and send the movie data */}
@@ -20,6 +21,11 @@ function MovieCard({ movie }: MovieCardProps) {
 
       {/* show if the movie is watched or not */}
       <p>{movie.watched ? "Watched" : "Unwatched"}</p>
+
+      {/* button to change watched status */}
+      <button onClick={() => toggleWatched(movie.id)}>
+        {movie.watched ? "Mark as unwatched" : "Mark as watched"}
+      </button>
     </div>
   );
 }

@@ -42,6 +42,21 @@ function MoviePage() {
     setMovies([...movies, newMovie]);
   }
 
+  // change watched status for one movie
+  function toggleWatched(id: number) {
+    const updatedMovies = movies.map((movie) => {
+      // find the clicked movie and switch watched value
+      if (movie.id === id) {
+        return { ...movie, watched: !movie.watched };
+      }
+
+      // keep other movies unchanged
+      return movie;
+    });
+    // save the updated movie list
+    setMovies(updatedMovies);
+  }
+
   // create a new list based on the selected filter
   const filteredMovies = movies.filter((movie) => {
     if (filter === "watched") {
@@ -61,7 +76,7 @@ function MoviePage() {
       <Link to="/">Go to home</Link>
       <MovieForm addMovie={addMovie} />
       <FilterBar setFilter={setFilter} />
-      <MovieList movies={filteredMovies} />
+      <MovieList movies={filteredMovies} toggleWatched={toggleWatched} />
     </div>
   );
 }
